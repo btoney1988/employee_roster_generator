@@ -96,7 +96,12 @@ function getEngineer() {
       name: "github",
       message: "Enter engineers github."
     },
-  ])
+  ]).then(answers => {
+    let { name, id, email, github } = answers;
+    let engineer = Engineer(name, id, email, github);
+
+    teamMember.push(engineer);
+  })
 }
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
