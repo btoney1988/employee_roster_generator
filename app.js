@@ -8,7 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/htmlRenderer");
+const Render = require("./lib/htmlRenderer");
 
 
 // Write code to use inquirer to gather information about the development team members,
@@ -79,22 +79,22 @@ function getEngineer() {
     {
       type: "input",
       name: "name",
-      message: "Enter engineers name."
+      message: "Enter engineer's name."
     },
     {
       type: "input",
       name: "id",
-      message: "Enter engineers id."
+      message: "Enter engineer's id."
     },
     {
       type: "input",
       name: "email",
-      message: "Enter engineers email."
+      message: "Enter engineer's email."
     },
     {
       type: "input",
       name: "github",
-      message: "Enter engineers github."
+      message: "Enter engineer's github."
     },
   ]).then(answers => {
     let { name, id, email, github } = answers;
@@ -103,6 +103,37 @@ function getEngineer() {
     teamMember.push(engineer);
   })
 }
+
+function getIntern() {
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "Enter intern's name."
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "Enter intern's id."
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Enter intern's email."
+    },
+    {
+      type: "input",
+      name: "school",
+      message: "Enter intern's school."
+    }
+  ]).then(answers => {
+    let { name, id, email, school } = answers;
+    let intern = Intern(name, id, email, school);
+
+    teamMember.push(intern);
+  })
+}
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
