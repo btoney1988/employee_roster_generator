@@ -47,6 +47,32 @@ function managerPrompt() {
   })
 }
 
+function createTeam() {
+  inquirer.prompt([
+    {
+      type: "list",
+      name: "command",
+      message: "Add more team members?",
+      choices: ["Add Engineer", "Add Intern", "Team Complete"]
+    }
+  ]).then(answers => {
+    memberType = answers.command;
+
+    switch (memberType) {
+      case "Add Engineer":
+        getEngineer();
+        break;
+
+      case "Add Intern":
+        getIntern();
+        break;
+
+      case "Team Complete":
+        buildTeam();
+        break;
+    }
+  })
+}
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
