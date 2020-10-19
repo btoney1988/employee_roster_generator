@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const teamMember = [];
+const teamMembers = [];
 
 function managerPrompt() {
   inquirer.prompt([
@@ -38,7 +38,7 @@ function managerPrompt() {
     let { name, id, email, officeNumber } = answers;
     let manager = new Manager(name, id, email, officeNumber);
 
-    teamMember.push(manager);
+    teamMembers.push(manager);
 
     createTeam();
   })
@@ -97,7 +97,7 @@ function getEngineer() {
     let { name, id, email, github } = answers;
     let engineer = new Engineer(name, id, email, github);
 
-    teamMember.push(engineer);
+    teamMembers.push(engineer);
     createTeam();
   })
 }
@@ -128,14 +128,14 @@ function getIntern() {
     let { name, id, email, school } = answers;
     let intern = new Intern(name, id, email, school);
 
-    teamMember.push(intern);
+    teamMembers.push(intern);
     createTeam();
   })
 }
 
 function buildTeam() {
 
-  fs.writeFileSync(outputPath, render(teamMember), 'utf-8');
+  fs.writeFileSync(outputPath, render(teamMembers), 'utf-8');
 }
 
 managerPrompt();
