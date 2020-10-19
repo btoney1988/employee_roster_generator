@@ -73,6 +73,31 @@ function createTeam() {
     }
   })
 }
+
+function getEngineer() {
+  inquirer.prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "Enter engineers name."
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "Enter engineers id."
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Enter engineers email."
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "Enter engineers github."
+    },
+  ])
+}
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
