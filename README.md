@@ -4,7 +4,8 @@
 
 # Description
  - This is a simple employee roster generator based off user input. You will need to use `node app.js` command in order to run the code.
- - After completeing the roster via node.js the app will create an html file with the team info displayed.
+ - After completeing the roster via the intergrated terminal the app will create an html file with the team info displayed accordingly.
+ - All tests are passing as per guidelines.
 
 # Table of contents
 
