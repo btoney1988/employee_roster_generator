@@ -22,10 +22,10 @@
 * [Questions](#questions)
 
 # Installation
- - The dependencies to be installed are: fs, jest and inquirer
+ - The dependencies to be installed are: inquirer, path, fs, and jest(for testing)
 
 # Usage
- - This app is used for creating a team profile webpage using node.js.
+ - This app is used for creating a employee roster webpage using `node app.js`.
 
 # License
  - The project is liscensed under MIT.
