@@ -34,7 +34,7 @@
  - Contributers: Brian Toney
 
 # Tests
- - Run the `npm test` command for testing.
+ - Run the `npm test` command for testing while having the jest dependency installed.
  - ![image](https://user-images.githubusercontent.com/68873509/96766939-d5111780-13a9-11eb-8c30-212f3a08d85b.png)
 
 
