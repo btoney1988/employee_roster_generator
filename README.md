@@ -41,6 +41,6 @@
 # Questions
  - If you have any questions about employee_roster_generator feel free to contact me at btoney1988@gmail.com or create an issue at https://github.com/btoney1988/employee_roster_generator
  
- [![Employee Roster Generator](https://user-images.githubusercontent.com/68873509/96767123-13a6d200-13aa-11eb-9a12-df6490318d08.png)](video "Employee Roster Generator")
+ [![Employee Roster Generator](https://user-images.githubusercontent.com/68873509/96767123-13a6d200-13aa-11eb-9a12-df6490318d08.png)](https://drive.google.com/file/d/1ikvus1UcvU16_y4JPczRBUS1AGtlnpS_/view "Employee Roster Generator")
 
  https://github.com/btoney1988/employee_roster_generator
